@@ -1,0 +1,10 @@
+id: deep-research-agent
+name: Deep Research Agent
+description: Multi-agent research assistant that performs web search, scraping, analysis, and report generation.
+entry_point: server:handle
+inputs:
+  - id: query
+    type: string
+outputs:
+  - id: report
+    type: string

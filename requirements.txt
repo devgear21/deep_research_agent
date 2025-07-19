@@ -1,0 +1,10 @@
+langchain
+langgraph
+langchain-groq
+langsmith
+streamlit
+google-search-results
+beautifulsoup4
+requests
+python-dotenv
+graphviz
