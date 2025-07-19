@@ -1,4 +1,4 @@
-# Deep Researcher
+# Deep Research Agent
 
 A multi-agent research system built with LangGraph that performs comprehensive research and analysis.
 
@@ -43,8 +43,8 @@ deepResearcher/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/deepResearcher.git
-cd deepResearcher
+git clone https://github.com/devgear21/deep_research_agent.git
+cd deep_research_agent
 ```
 
 2. Install dependencies:
