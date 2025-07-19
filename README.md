@@ -1,73 +1,45 @@
-# Deep Research Agent
+#  Deep Research Agent
 
-A multi-agent research system built with LangGraph that performs comprehensive research and analysis.
+A modular, AI-powered research assistant built with *Streamlit, **LangGraph, **LangChain, **SerpAPI, and **Groq*. It automates web research on any topic i.e. extracting links, scraping pages, analyzing content, identifying events, and generating structured reports.
 
-## Overview
+---
 
-This project implements a workflow of specialized agents that work together to:
-- Search for information
-- Scrape web content
-- Analyze data
-- Find relevant events
-- Generate comprehensive reports
+##  Features
 
-## Architecture
+-  *Streamlit UI* for interactive research queries
+-  *SerpAPI-based search* to fetch relevant web pages
+-  *Content scraper* using BeautifulSoup
+-  *LLM-powered analyst* (Groq + LLaMA3 70B) for extracting insights
+-  *Event Finder* to identify upcoming conferences or meetings
+-  *Research Writer* to synthesize a clean, structured final report
+-  Built using *LangGraph stateful workflows*
+-  *LangSmith* used for debugging, monitoring, and tracing agent execution
 
-The system uses a state-based workflow with the following agents:
-- **Searcher**: Finds relevant links and sources
-- **Scraper**: Extracts content from web sources
-- **Analyst**: Analyzes the collected content
-- **Event Finder**: Identifies relevant events
-- **Writer**: Generates the final report
+---
 
-## Project Structure
+##  Demo
 
-```
-deepResearcher/
-├── app.py              # Main application entry point
-├── graph.py            # LangGraph workflow definition
-├── main.py             # Alternative entry point
-├── server.py           # Server implementation
-├── requirements.txt    # Python dependencies
-├── agents/
-│   ├── searcher.py     # Search agent
-│   ├── scraper.py      # Web scraping agent
-│   ├── analyst.py      # Analysis agent
-│   ├── event_finder.py # Event detection agent
-│   └── writer.py       # Report generation agent
-└── mcp_config/
-    └── manifest.yaml   # Configuration file
-```
+<p align="center">
+  <a href="https://youtu.be/hxuwwLcTe_s">
+    <img src="https://img.youtube.com/vi/hxuwwLcTe_s/0.jpg" alt="Watch the video" />
+  </a>
+</p>
 
-## Installation
+---
 
-1. Clone the repository:
-```bash
-git clone https://github.com/devgear21/deep_research_agent.git
-cd deep_research_agent
-```
+##  Architecture Overview
 
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+<div align="center">
 
-## Usage
-
-Run the application:
-```bash
-python app.py
-```
-
-Or use the server:
-```bash
-python server.py
-```
-
-## Dependencies
-
-See `requirements.txt` for a complete list of dependencies.
-
-## License
-
-This project is open source. Please see the LICENSE file for details.
+```plaintext
+User Input (Query)
+        ↓
+[Searcher Node] → Search via SerpAPI → Extract links
+        ↓
+[Scraper Node] → Scrape page content
+        ↓
+[Analyst Node] → AI-powered insights
+        ↓
+[Event Finder Node] → Detect related events
+        ↓
+[Writer Node] → Final structured report
